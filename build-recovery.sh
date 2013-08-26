@@ -75,14 +75,14 @@ then
 fi
 
 git config --global user.name $(whoami)@$NODE_NAME
-git config --global user.email jenkins@cyanogenmod.com
+git config --global user.email jenkins@TeamCanjica-I7
 
 mkdir -p $REPO_BRANCH
 cd $REPO_BRANCH
 
 rm -rf .repo/manifests*
 rm -rf .repo/local_manifests/
-repo init -u $SYNC_PROTO://github.com/CyanogenMod/android.git -b $REPO_BRANCH
+repo init -u $SYNC_PROTO://github.com/diego-ch/android.git -b $REPO_BRANCH
 check_result "repo init failed."
 
 mkdir -p .repo/local_manifests
